@@ -1,0 +1,12 @@
+.gradle/
+build/
+**/build/
+local.properties
+work/
+outputs/
+.gh-config/
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/

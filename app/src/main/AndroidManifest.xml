@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher_day_21" android:label="流光日历" android:supportsRtl="true" android:theme="@style/Theme.LiuguangCalendar" android:roundIcon="@mipmap/ic_launcher_day_21">
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity-alias android:name=".Day01Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_01" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day02Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_02" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day03Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_03" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day04Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_04" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day05Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_05" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day06Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_06" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day07Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_07" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day08Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_08" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day09Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_09" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day10Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_10" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day11Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_11" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day12Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_12" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day13Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_13" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day14Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_14" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day15Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_15" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day16Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_16" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day17Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_17" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day18Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_18" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day19Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_19" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day20Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_20" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day21Alias" android:enabled="true" android:exported="true" android:icon="@mipmap/ic_launcher_day_21" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day22Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_22" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day23Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_23" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day24Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_24" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day25Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_25" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day26Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_26" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day27Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_27" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day28Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_28" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day29Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_29" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day30Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_30" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name=".Day31Alias" android:enabled="false" android:exported="true" android:icon="@mipmap/ic_launcher_day_31" android:label="流光日历" android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <receiver android:name=".LauncherIconUpdateReceiver" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="com.example.liuguangcalendar.UPDATE_ICON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ReminderReceiver" android:enabled="true" android:exported="false" />
+        <receiver android:name=".ReminderActionReceiver" android:enabled="true" android:exported="false" />
+    </application>
+</manifest>
