@@ -1,6 +1,6 @@
 # 流光日历
 
-一个Android 日历原型，使用 Kotlin + Jetpack Compose。
+一个Android 日历原型，使用 Kotlin + Jetpack Compose。界面简单大方，日历+待办组合，让你的工作生活一目了然。
 
 ![流光日历主界面](docs/screenshots/calendar-v6-screen.png)
 
