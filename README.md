@@ -1,6 +1,6 @@
 # 流光日历
 
-一个面向 Pixel 10 Pro XL 的 Android 日历原型，使用 Kotlin + Jetpack Compose。
+一个Android 日历原型，使用 Kotlin + Jetpack Compose。
 
 ![流光日历主界面](docs/screenshots/calendar-v6-screen.png)
 
