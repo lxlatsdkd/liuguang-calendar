@@ -14,6 +14,10 @@
 - 点击任务分类区域延期到下一天
 - 添加待办底部弹层
 - 液态玻璃风格的半透明面板
+- 真实待办本地持久化，删除每日预设待办
+- 切换日期、重启 App 后保留待办数据
+- 开机、时间变化和时区变化后自动恢复提醒
+- 提前 10 分钟和到点各提醒一次
 
 ## 截图
 
@@ -27,6 +31,6 @@
 
 ## APK
 
-最新调试版 APK：[`liuguang-calendar-v17-debug.apk`](artifacts/liuguang-calendar-v17-debug.apk)
+最新调试版 APK：[`liuguang-calendar-v18-debug.apk`](artifacts/liuguang-calendar-v18-debug.apk)
 
-下一阶段可以接入真实农历算法、节假日数据源、Room 持久化和更完整的系统提醒能力。
+v18 主要更新：修复跨天后待办恢复为预设数据的问题，改为只显示真实保存的待办，并完善本地持久化和提醒恢复逻辑。
