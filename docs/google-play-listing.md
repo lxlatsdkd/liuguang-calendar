@@ -1,4 +1,6 @@
-# Google Play 商店资料
+# Google Play 商店资料草稿（暂不使用）
+
+当前仅通过 GitHub Releases 分发，暂不提交 Google Play。本文件仅保留商店文案草稿。
 
 ## 基本信息
 

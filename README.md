@@ -2,7 +2,7 @@
 
 流光日历是一款面向 Android 手机的中文日历与待办应用，使用 Kotlin、Jetpack Compose 和 Material 3 构建。应用将月历、农历、节假日和当天待办集中在一个界面中，并采用半透明的液态玻璃风格控件。
 
-> 当前正式版本：**v1.0.3** · 提供正式签名 APK 和 Google Play AAB
+> 当前正式版本：**v1.0.3** · 仅通过 GitHub Release 分发
 
 ![流光日历主界面](docs/screenshots/calendar-v6-screen.png)
 
@@ -49,16 +49,15 @@
 - 节假日数据联网获取时仅请求公开的年度日历数据，并在本地缓存。
 - 卸载应用会清除应用本地保存的待办和提醒数据。
 
-隐私政策页面：[`docs/privacy-policy.md`](docs/privacy-policy.md)。上架 Play Console 时，可填写 GitHub 渲染页面，或将 `docs/privacy-policy.html` 部署到 GitHub Pages。
+隐私政策页面：[`docs/privacy-policy.md`](docs/privacy-policy.md)。
 
-## Google Play 上架资料
+## 下载与发布
 
-- 商店文案、数据安全填表建议和素材清单：[`docs/google-play-listing.md`](docs/google-play-listing.md)
-- 上架步骤与待完成事项：[`docs/google-play-checklist.md`](docs/google-play-checklist.md)
-- 正式签名 AAB：`outputs/liuguang-calendar-v1.0.3-release.aab`
-- 正式签名 APK：`outputs/liuguang-calendar-v1.0.3-release.apk`
+- 当前分发渠道：GitHub Releases
+- Android 手机安装文件：在 [v1.0.3 Release](https://github.com/lxlatsdkd/liuguang-calendar/releases/tag/v1.0.3) 下载正式签名 APK
+- AAB 也保存在 Release 附件中，作为 Android App Bundle 构建产物；日常安装请下载 APK
 
-当前项目已完成本地发布前准备，但 Google Play Console 的账号验证、注册费、法律协议和最终提交必须由账号持有人完成。首次发布前请确认永久包名 `com.example.liuguangcalendar`。
+目前不在 Google Play 上架，用户通过 GitHub Release 获取应用。
 
 ## 技术栈
 
@@ -142,7 +141,7 @@ app/build/outputs/bundle/release/app-release.aab
 
 正式签名 APK：[`liuguang-calendar-v1.0.3-release.apk`](https://github.com/lxlatsdkd/liuguang-calendar/releases/download/v1.0.3/liuguang-calendar-v1.0.3-release.apk)
 
-Google Play 上传包：[`liuguang-calendar-v1.0.3-release.aab`](https://github.com/lxlatsdkd/liuguang-calendar/releases/download/v1.0.3/liuguang-calendar-v1.0.3-release.aab)
+App Bundle：[`liuguang-calendar-v1.0.3-release.aab`](https://github.com/lxlatsdkd/liuguang-calendar/releases/download/v1.0.3/liuguang-calendar-v1.0.3-release.aab)
 
 ### 1.0.3 更新内容
 
@@ -173,4 +172,4 @@ app/src/main/java/com/example/liuguangcalendar/
 
 ## 说明
 
-这是一个个人使用和持续迭代中的 Android 项目。当前公开下载内容均为 v1.0.3 正式签名构建：APK 适合直接安装，AAB 用于 Google Play 上传。正式上架仍需要完成 Play Console 账号验证、商店资料、内容分级和数据安全表单。
+这是一个个人使用和持续迭代中的 Android 项目。当前公开下载内容均为 v1.0.3 正式签名构建，通过 GitHub Release 分发；APK 适合直接安装，AAB 作为构建产物一并提供。当前未在 Google Play 发布。

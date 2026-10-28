@@ -1,4 +1,6 @@
-# Google Play 上架清单
+# Google Play 上架准备（已暂停）
+
+当前决定：暂不发布到 Google Play，应用只通过 GitHub Releases 分发。本文保留为将来可能需要的准备记录，不代表正在提交上架。
 
 ## 本地已完成
 
