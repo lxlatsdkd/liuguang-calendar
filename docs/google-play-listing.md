@@ -46,7 +46,7 @@
 - 是否包含广告：否
 - 是否允许用户请求删除数据：是，用户可以在应用内删除待办，或卸载/清除应用数据
 - 数据是否加密传输：节假日请求使用 HTTPS；待办数据不离开设备
-- 隐私政策：发布后可使用 GitHub Pages 地址，或临时使用仓库中的 `docs/privacy-policy.html` 公共页面
+- 隐私政策：`https://github.com/lxlatsdkd/liuguang-calendar/blob/main/docs/privacy-policy.md`；也可将 `docs/privacy-policy.html` 部署到 GitHub Pages 后使用 Pages 地址
 
 ## 内容分级问卷建议
 
@@ -58,7 +58,7 @@
 
 ## 素材
 
-- 应用图标：`outputs/calendar-icon-v5-day21.png`
+- 应用图标：`docs/store-assets/liuguang-calendar-icon-512.png`
 - 主界面截图：`outputs/calendar-v6-screen.png`
 - 紧凑布局截图：`outputs/calendar-v6-screen-compact.png`
 - 月份滑动截图：`outputs/calendar-v6-swipe.png`
@@ -67,7 +67,7 @@
 - 日期选择截图：`outputs/calendar-v6-date-calendar.png`
 - 日期滚轮截图：`outputs/calendar-v6-date-wheel.png`
 - 时间滚轮截图：`outputs/calendar-v6-time-wheel.png`
-- 商店横幅：`outputs/google-play-feature-graphic.png`
+- 商店横幅：`docs/store-assets/google-play-feature-graphic.png`
 
 ## 上传文件
 

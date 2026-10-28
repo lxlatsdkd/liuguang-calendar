@@ -49,7 +49,7 @@
 - 节假日数据联网获取时仅请求公开的年度日历数据，并在本地缓存。
 - 卸载应用会清除应用本地保存的待办和提醒数据。
 
-隐私政策页面：[`docs/privacy-policy.html`](docs/privacy-policy.html)。上架 Play Console 时，建议将该页面部署到 GitHub Pages 后填写公开 URL。
+隐私政策页面：[`docs/privacy-policy.md`](docs/privacy-policy.md)。上架 Play Console 时，可填写 GitHub 渲染页面，或将 `docs/privacy-policy.html` 部署到 GitHub Pages。
 
 ## Google Play 上架资料
 

@@ -18,7 +18,7 @@
 - [ ] 确认永久包名：`com.example.liuguangcalendar`
 - [ ] 创建应用并选择默认语言、应用类别和联系邮箱
 - [ ] 填写商店资料、内容分级、目标受众和数据安全表单
-- [ ] 在 Play Console 设置中填写隐私政策 URL
+- [ ] 在 Play Console 设置中填写隐私政策 URL：`https://github.com/lxlatsdkd/liuguang-calendar/blob/main/docs/privacy-policy.md`
 - [ ] 上传 `outputs/liuguang-calendar-v1.0.2-release.aab` 到内部测试
 - [ ] 在 Pixel 10 Pro XL 上安装内部测试版本并验证提醒、通知和待办持久化
 - [ ] 根据 Play Console 对个人开发者账号的测试要求完成测试后，再申请公开发布
