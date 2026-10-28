@@ -2,6 +2,8 @@
 
 流光日历是一款面向 Android 手机的中文日历与待办应用，使用 Kotlin、Jetpack Compose 和 Material 3 构建。应用将月历、农历、节假日和当天待办集中在一个界面中，并采用半透明的液态玻璃风格控件。
 
+> 当前正式版本：**v1.0.2** · 提供正式签名 APK 和 Google Play AAB
+
 ![流光日历主界面](docs/screenshots/calendar-v6-screen.png)
 
 ## 功能概览
@@ -63,7 +65,7 @@
 3. 连接 Android 手机或启动模拟器。
 4. 运行 `app` 配置。
 
-命令行构建 Debug APK：
+开发构建 APK：
 
 ```text
 ./gradlew assembleDebug
@@ -102,7 +104,7 @@ app/build/outputs/apk/release/app-release.apk
 app/build/outputs/bundle/release/app-release.aab
 ```
 
-正式版使用独立签名，不能覆盖安装使用 Debug 签名的旧版本。测试正式版前，需要卸载手机上的 Debug 版；正式版后续更新必须继续使用同一个签名密钥。
+正式版使用独立签名。如果手机中安装的是早期测试构建，首次安装正式版时可能需要先卸载旧版本；正式版后续更新必须继续使用同一个签名密钥。
 
 运行单元测试：
 
@@ -131,8 +133,6 @@ app/build/outputs/bundle/release/app-release.aab
 
 Google Play 上传包：[`liuguang-calendar-v1.0.2-release.aab`](https://github.com/lxlatsdkd/liuguang-calendar/releases/download/v1.0.2/liuguang-calendar-v1.0.2-release.aab)
 
-Debug 测试 APK：[`liuguang-calendar-v18-debug.apk`](artifacts/liuguang-calendar-v18-debug.apk)
-
 ### 1.0.2 更新内容
 
 - 修复跨天后待办列表恢复为预设内容的问题。
@@ -141,7 +141,7 @@ Debug 测试 APK：[`liuguang-calendar-v18-debug.apk`](artifacts/liuguang-calend
 - 完成、编辑、删除和通知操作后同步保存数据。
 - 增加开机、时间变化、时区变化和应用更新后的提醒恢复。
 - 修复 Robolectric 测试缓存目录问题，确保测试环境可重复运行。
-- 增加正式 Release 签名配置。
+- 增加正式签名 Release 配置。
 - 升级到 Android API 36，生成 APK 和 AAB 两种正式产物。
 
 ## 项目结构
@@ -157,4 +157,4 @@ app/src/main/java/com/example/liuguangcalendar/
 
 ## 说明
 
-这是一个个人使用和持续迭代中的 Android 项目。正式 APK 适合直接安装测试，AAB 用于 Google Play 上传。正式上架仍需要准备隐私政策、商店截图、内容分级、数据安全表单和应用商店签名配置。
+这是一个个人使用和持续迭代中的 Android 项目。当前公开下载内容均为 v1.0.2 正式签名构建：APK 适合直接安装，AAB 用于 Google Play 上传。正式上架仍需要准备隐私政策、商店截图、内容分级和数据安全表单。
