@@ -49,6 +49,17 @@
 - 节假日数据联网获取时仅请求公开的年度日历数据，并在本地缓存。
 - 卸载应用会清除应用本地保存的待办和提醒数据。
 
+隐私政策页面：[`docs/privacy-policy.html`](docs/privacy-policy.html)。上架 Play Console 时，建议将该页面部署到 GitHub Pages 后填写公开 URL。
+
+## Google Play 上架资料
+
+- 商店文案、数据安全填表建议和素材清单：[`docs/google-play-listing.md`](docs/google-play-listing.md)
+- 上架步骤与待完成事项：[`docs/google-play-checklist.md`](docs/google-play-checklist.md)
+- 正式签名 AAB：`outputs/liuguang-calendar-v1.0.2-release.aab`
+- 正式签名 APK：`outputs/liuguang-calendar-v1.0.2-release.apk`
+
+当前项目已完成本地发布前准备，但 Google Play Console 的账号验证、注册费、法律协议和最终提交必须由账号持有人完成。首次发布前请确认永久包名 `com.example.liuguangcalendar`。
+
 ## 技术栈
 
 - Kotlin
