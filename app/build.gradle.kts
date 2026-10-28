@@ -36,6 +36,18 @@ android {
         unitTests.isIncludeAndroidResources = true
         unitTests.all {
             it.systemProperty("robolectric.dependency.repo.url", "https://repo.maven.apache.org/maven2")
+            it.systemProperty(
+                "user.home",
+                layout.buildDirectory.dir("robolectric-home").get().asFile.absolutePath
+            )
+            it.systemProperty(
+                "java.io.tmpdir",
+                layout.buildDirectory.dir("robolectric-tmp").get().asFile.absolutePath
+            )
+            it.systemProperty(
+                "maven.repo.local",
+                layout.buildDirectory.dir("robolectric-m2").get().asFile.absolutePath
+            )
         }
     }
 

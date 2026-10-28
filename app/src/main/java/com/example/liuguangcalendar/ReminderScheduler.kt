@@ -328,6 +328,16 @@ class ReminderActionReceiver : BroadcastReceiver() {
             "complete" -> {
                 ReminderScheduler.cancel(context, task.id)
                 ReminderScheduler.setCompleted(context, task.id, occurrenceDate, true)
+                val storedTasks = TaskRepository.load(context)
+                val index = storedTasks.indexOfFirst { it.id == task.id }
+                if (index >= 0) {
+                    TaskRepository.save(
+                        context,
+                        storedTasks.toMutableList().apply {
+                            this[index] = this[index].copy(completed = true)
+                        }
+                    )
+                }
                 context.sendBroadcast(
                     Intent(ReminderScheduler.ACTION_TASK_UPDATED)
                         .setPackage(context.packageName)

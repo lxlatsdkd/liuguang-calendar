@@ -22,6 +22,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
 import org.robolectric.shadows.ShadowDialog
@@ -53,6 +54,7 @@ class CalendarInteractionTest {
     }
 
     @Test fun searchOpensFiltersAndKeepsCompletedResults() {
+        seedSearchTasks()
         compose.setContent { LiuguangCalendarTheme { CalendarApp() } }
         compose.onNodeWithTag("glass-搜索").performClick()
         compose.onNodeWithTag("task-search").performTextInput("项目")
@@ -70,6 +72,7 @@ class CalendarInteractionTest {
     }
 
     @Test fun searchResultOpensDateAndSupportsDelete() {
+        seedSearchTasks()
         compose.setContent { LiuguangCalendarTheme { CalendarApp() } }
         compose.onNodeWithTag("glass-搜索").performClick()
         compose.onNodeWithTag("task-search").performTextInput("项目")
@@ -208,6 +211,17 @@ class CalendarInteractionTest {
             input.clearFocus()
         }
         compose.waitForIdle()
+    }
+
+    private fun seedSearchTasks() {
+        val today = LocalDate.now()
+        TaskRepository.save(
+            RuntimeEnvironment.getApplication(),
+            listOf(
+                CalendarTask(101, "项目会议", "14:30", today, "工作", Color.Blue),
+                CalendarTask(102, "和家人视频", "20:00", today, "家庭", Color.Green)
+            )
+        )
     }
 
     private fun descendants(view: View): List<View> =

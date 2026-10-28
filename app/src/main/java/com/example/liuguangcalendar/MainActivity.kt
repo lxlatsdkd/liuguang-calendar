@@ -223,12 +223,12 @@ internal fun CalendarApp() {
     var searchQuery by remember { mutableStateOf("") }
     var editingTaskId by remember { mutableStateOf<Long?>(null) }
     val tasks = remember {
-        mutableStateListOf(
-            CalendarTask(1, "早起运动", "09:00", today, "生活", Teal, true),
-            CalendarTask(2, "项目会议", "14:30", today, "工作", Blue, ReminderScheduler.isCompleted(context, 2, today)),
-            CalendarTask(3, "整理本周计划", "16:00", today, "生活", WarmYellow, ReminderScheduler.isCompleted(context, 3, today)),
-            CalendarTask(4, "和家人视频", "20:00", today, "家庭", Blue, ReminderScheduler.isCompleted(context, 4, today))
-        )
+        mutableStateListOf<CalendarTask>().apply {
+            addAll(TaskRepository.load(context))
+        }
+    }
+    LaunchedEffect(Unit) {
+        tasks.forEach { ReminderScheduler.schedule(context, it) }
     }
     DisposableEffect(context) {
         val receiver = object : BroadcastReceiver() {
@@ -239,6 +239,7 @@ internal fun CalendarApp() {
                 val index = tasks.indexOfFirst { it.id == taskId }
                 if (index >= 0) {
                     tasks[index] = tasks[index].copy(completed = completed)
+                    TaskRepository.save(context, tasks)
                 }
             }
         }
@@ -265,11 +266,13 @@ internal fun CalendarApp() {
             val updated = tasks[index].copy(completed = !tasks[index].completed)
             tasks[index] = updated
             ReminderScheduler.setCompleted(context, updated.id, selectedDate, updated.completed)
+            TaskRepository.save(context, tasks)
         }
     }
     val deleteTask: (Long) -> Unit = { id ->
         ReminderScheduler.cancel(context, id)
         tasks.removeAll { it.id == id }
+        TaskRepository.save(context, tasks)
     }
 
     if (showSearch) {
@@ -400,6 +403,7 @@ internal fun CalendarApp() {
                 } else {
                     tasks.add(savedTask)
                 }
+                TaskRepository.save(context, tasks)
                 ReminderScheduler.schedule(context, savedTask)
                 showAddSheet = false
                 editingTaskId = null
