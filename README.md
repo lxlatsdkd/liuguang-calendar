@@ -2,7 +2,7 @@
 
 流光日历是一款面向 Android 手机的中文日历与待办应用，使用 Kotlin、Jetpack Compose 和 Material 3 构建。应用将月历、农历、节假日和当天待办集中在一个界面中，并采用半透明的液态玻璃风格控件。
 
-> 当前正式版本：**v1.0.2** · 提供正式签名 APK 和 Google Play AAB
+> 当前正式版本：**v1.0.3** · 提供正式签名 APK 和 Google Play AAB
 
 ![流光日历主界面](docs/screenshots/calendar-v6-screen.png)
 
@@ -55,8 +55,8 @@
 
 - 商店文案、数据安全填表建议和素材清单：[`docs/google-play-listing.md`](docs/google-play-listing.md)
 - 上架步骤与待完成事项：[`docs/google-play-checklist.md`](docs/google-play-checklist.md)
-- 正式签名 AAB：`outputs/liuguang-calendar-v1.0.2-release.aab`
-- 正式签名 APK：`outputs/liuguang-calendar-v1.0.2-release.apk`
+- 正式签名 AAB：`outputs/liuguang-calendar-v1.0.3-release.aab`
+- 正式签名 APK：`outputs/liuguang-calendar-v1.0.3-release.apk`
 
 当前项目已完成本地发布前准备，但 Google Play Console 的账号验证、注册费、法律协议和最终提交必须由账号持有人完成。首次发布前请确认永久包名 `com.example.liuguangcalendar`。
 
@@ -138,11 +138,16 @@ app/build/outputs/bundle/release/app-release.aab
 
 ## 最新构建
 
-当前版本：**1.0.2（versionCode 12）**
+当前版本：**1.0.3（versionCode 13）**
 
-正式签名 APK：[`liuguang-calendar-v1.0.2-release.apk`](https://github.com/lxlatsdkd/liuguang-calendar/releases/download/v1.0.2/liuguang-calendar-v1.0.2-release.apk)
+正式签名 APK：[`liuguang-calendar-v1.0.3-release.apk`](https://github.com/lxlatsdkd/liuguang-calendar/releases/download/v1.0.3/liuguang-calendar-v1.0.3-release.apk)
 
-Google Play 上传包：[`liuguang-calendar-v1.0.2-release.aab`](https://github.com/lxlatsdkd/liuguang-calendar/releases/download/v1.0.2/liuguang-calendar-v1.0.2-release.aab)
+Google Play 上传包：[`liuguang-calendar-v1.0.3-release.aab`](https://github.com/lxlatsdkd/liuguang-calendar/releases/download/v1.0.3/liuguang-calendar-v1.0.3-release.aab)
+
+### 1.0.3 更新内容
+
+- 增加应用内隐私政策入口，便于用户查看数据处理说明。
+- 继续保留 1.0.2 的本地待办持久化、提醒恢复和正式签名配置。
 
 ### 1.0.2 更新内容
 
@@ -168,4 +173,4 @@ app/src/main/java/com/example/liuguangcalendar/
 
 ## 说明
 
-这是一个个人使用和持续迭代中的 Android 项目。当前公开下载内容均为 v1.0.2 正式签名构建：APK 适合直接安装，AAB 用于 Google Play 上传。正式上架仍需要准备隐私政策、商店截图、内容分级和数据安全表单。
+这是一个个人使用和持续迭代中的 Android 项目。当前公开下载内容均为 v1.0.3 正式签名构建：APK 适合直接安装，AAB 用于 Google Play 上传。正式上架仍需要完成 Play Console 账号验证、商店资料、内容分级和数据安全表单。

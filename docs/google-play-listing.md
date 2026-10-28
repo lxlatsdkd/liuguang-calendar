@@ -4,7 +4,7 @@
 
 - 应用名称：流光日历
 - 包名：`com.example.liuguangcalendar`
-- 版本：1.0.2（versionCode 12）
+- 版本：1.0.3（versionCode 13）
 - 类别：效率（Productivity）
 - 是否含广告：否
 - 是否含应用内购买：否
@@ -71,5 +71,5 @@
 
 ## 上传文件
 
-- Google Play App Bundle：`outputs/liuguang-calendar-v1.0.2-release.aab`
-- 直接安装测试包：`outputs/liuguang-calendar-v1.0.2-release.apk`
+- Google Play App Bundle：`outputs/liuguang-calendar-v1.0.3-release.aab`
+- 直接安装测试包：`outputs/liuguang-calendar-v1.0.3-release.apk`

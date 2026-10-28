@@ -88,6 +88,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
@@ -116,6 +117,7 @@ private val Coral = Color(0xFFFF6D62)
 private val WarmYellow = Color(0xFFFFB51B)
 private val Divider = Color(0x1A6B8298)
 private val lunarLabelCache = mutableMapOf<LocalDate, String>()
+private const val PRIVACY_POLICY_URL = "https://github.com/lxlatsdkd/liuguang-calendar/blob/main/docs/privacy-policy.md"
 
 data class CalendarTask(
     val id: Long,
@@ -192,6 +194,7 @@ internal fun LiuguangCalendarTheme(content: @Composable () -> Unit) {
 @Composable
 internal fun CalendarApp() {
     val context = LocalContext.current
+    val uriHandler = LocalUriHandler.current
     val today = remember { LocalDate.now() }
     val anchorMonth = remember { YearMonth.from(today) }
     var holidaysByYear by remember {
@@ -380,6 +383,7 @@ internal fun CalendarApp() {
                         holiday = holidaysByYear[selectedDate.year]?.get(selectedDate),
                         onToggle = toggleTask,
                         onAdd = { showAddSheet = true },
+                        onPrivacyPolicy = { uriHandler.openUri(PRIVACY_POLICY_URL) },
                         onEdit = {
                             editingTaskId = it.id
                             showAddSheet = true
@@ -720,6 +724,7 @@ private fun TodayTasksCard(
     holiday: HolidayInfo?,
     onToggle: (Long) -> Unit,
     onAdd: () -> Unit,
+    onPrivacyPolicy: () -> Unit,
     onEdit: (CalendarTask) -> Unit,
     onDelete: (Long) -> Unit
 ) {
@@ -797,6 +802,14 @@ private fun TodayTasksCard(
                                 .padding(vertical = 32.dp),
                             textAlign = androidx.compose.ui.text.style.TextAlign.Center
                         )
+                    }
+                }
+                item {
+                    TextButton(
+                        onClick = onPrivacyPolicy,
+                        contentPadding = PaddingValues(horizontal = 0.dp, vertical = 4.dp)
+                    ) {
+                        Text("隐私政策", color = MutedInk, fontSize = 12.sp)
                     }
                 }
             }
