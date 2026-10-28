@@ -52,7 +52,7 @@
 - Kotlin
 - Jetpack Compose
 - Material 3
-- Android SDK 35，最低支持 Android 8.0（API 26）
+- Android SDK 36，最低支持 Android 8.0（API 26）
 - Java/Kotlin JVM 17
 - Robolectric、JUnit 和 Compose UI 测试
 
@@ -68,6 +68,41 @@
 ```text
 ./gradlew assembleDebug
 ```
+
+### 构建正式签名版
+
+正式版使用本地签名密钥。签名文件和密码不应提交到 GitHub。项目根目录提供了配置模板：
+`keystore.properties.example`。
+
+复制为 `keystore.properties` 后填写自己的签名信息：
+
+```text
+storeFile=签名文件路径
+storePassword=签名库密码
+keyAlias=签名别名
+keyPassword=签名密码
+```
+
+构建可直接安装的正式 APK：
+
+```text
+./gradlew assembleRelease
+```
+
+构建提交 Google Play 的正式 App Bundle：
+
+```text
+./gradlew bundleRelease
+```
+
+生成的文件位于：
+
+```text
+app/build/outputs/apk/release/app-release.apk
+app/build/outputs/bundle/release/app-release.aab
+```
+
+正式版使用独立签名，不能覆盖安装使用 Debug 签名的旧版本。测试正式版前，需要卸载手机上的 Debug 版；正式版后续更新必须继续使用同一个签名密钥。
 
 运行单元测试：
 
@@ -88,13 +123,17 @@
 - 农历文本和节假日兜底数据
 - 提醒发生日期、完成状态和通知操作
 
-## 最新 APK
+## 最新构建
 
-当前版本：**1.0.1（versionCode 11）**
+当前版本：**1.0.2（versionCode 12）**
 
-下载最新 Debug APK：[`liuguang-calendar-v18-debug.apk`](artifacts/liuguang-calendar-v18-debug.apk)
+正式签名 APK：[`liuguang-calendar-v1.0.2-release.apk`](https://github.com/lxlatsdkd/liuguang-calendar/releases/download/v1.0.2/liuguang-calendar-v1.0.2-release.apk)
 
-### 1.0.1 更新内容
+Google Play 上传包：[`liuguang-calendar-v1.0.2-release.aab`](https://github.com/lxlatsdkd/liuguang-calendar/releases/download/v1.0.2/liuguang-calendar-v1.0.2-release.aab)
+
+Debug 测试 APK：[`liuguang-calendar-v18-debug.apk`](artifacts/liuguang-calendar-v18-debug.apk)
+
+### 1.0.2 更新内容
 
 - 修复跨天后待办列表恢复为预设内容的问题。
 - 删除每日预设待办，只保留真实保存的待办。
@@ -102,6 +141,8 @@
 - 完成、编辑、删除和通知操作后同步保存数据。
 - 增加开机、时间变化、时区变化和应用更新后的提醒恢复。
 - 修复 Robolectric 测试缓存目录问题，确保测试环境可重复运行。
+- 增加正式 Release 签名配置。
+- 升级到 Android API 36，生成 APK 和 AAB 两种正式产物。
 
 ## 项目结构
 
@@ -116,4 +157,4 @@ app/src/main/java/com/example/liuguangcalendar/
 
 ## 说明
 
-这是一个个人使用和持续迭代中的 Android 项目。当前发布的是 Debug APK，适合测试功能，不代表已完成应用商店发布所需的签名、隐私政策、商店素材和正式版构建流程。
+这是一个个人使用和持续迭代中的 Android 项目。正式 APK 适合直接安装测试，AAB 用于 Google Play 上传。正式上架仍需要准备隐私政策、商店截图、内容分级、数据安全表单和应用商店签名配置。

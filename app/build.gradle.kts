@@ -3,9 +3,11 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+import java.util.Properties
+
 android {
     namespace = "com.example.liuguangcalendar"
-    compileSdk = 35
+    compileSdk = 36
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -15,9 +17,9 @@ android {
     defaultConfig {
         applicationId = "com.example.liuguangcalendar"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 11
-        versionName = "1.0.1"
+        targetSdk = 36
+        versionCode = 12
+        versionName = "1.0.2"
     }
 
     buildFeatures {
@@ -30,6 +32,48 @@ android {
 
     kotlinOptions {
         jvmTarget = "17"
+    }
+
+    val signingProperties = Properties()
+    val signingPropertiesFile = rootProject.file("keystore.properties")
+    if (signingPropertiesFile.isFile) {
+        signingPropertiesFile.inputStream().use(signingProperties::load)
+    }
+
+    val releaseStoreFile = signingProperties.getProperty("storeFile")
+        ?: System.getenv("LIUGUANG_STORE_FILE")
+    val releaseStorePassword = signingProperties.getProperty("storePassword")
+        ?: System.getenv("LIUGUANG_STORE_PASSWORD")
+    val releaseKeyAlias = signingProperties.getProperty("keyAlias")
+        ?: System.getenv("LIUGUANG_KEY_ALIAS")
+    val releaseKeyPassword = signingProperties.getProperty("keyPassword")
+        ?: System.getenv("LIUGUANG_KEY_PASSWORD")
+    val releaseSigningConfigured = listOf(
+        releaseStoreFile,
+        releaseStorePassword,
+        releaseKeyAlias,
+        releaseKeyPassword
+    ).all { !it.isNullOrBlank() }
+
+    signingConfigs {
+        create("release") {
+            if (releaseSigningConfigured) {
+                storeFile = rootProject.file(releaseStoreFile!!)
+                storePassword = releaseStorePassword
+                keyAlias = releaseKeyAlias
+                keyPassword = releaseKeyPassword
+            }
+        }
+    }
+
+    buildTypes {
+        getByName("release") {
+            if (releaseSigningConfigured) {
+                signingConfig = signingConfigs.getByName("release")
+            }
+            isDebuggable = false
+            isMinifyEnabled = false
+        }
     }
 
     testOptions {
